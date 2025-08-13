@@ -57,7 +57,7 @@ a{
 #f1{
     position: absolute;
     height: 800px;
-    width:1440px;
+    width:100%;
     left:0;
     /* background-size: cover; */
 }
