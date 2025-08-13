@@ -50,11 +50,16 @@ a{
     height: 800px;
     width:100%;
     left:0;
-   
-    background-image: url("https://github.com/kalvii/web/blob/main/pic4.jpg");
     background-size: cover;
     
 } 
+#f1{
+    position: absolute;
+    height: 800px;
+    width:100%;
+    left:0;
+    /* background-size: cover; */
+}
 #n1{
     position:absolute;
     color: white;
