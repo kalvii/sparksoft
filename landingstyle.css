@@ -1,13 +1,11 @@
 *{
   margin: 0;
-  padding: 0; 
-  
-
+  padding: 0;  
 }
 .mainpage{
     position: relative;
     height: 1400px;
-    width: 100%;
+   width: 100%;
    
 }
 #header{
@@ -19,15 +17,21 @@
     justify-content: center;
     top: 20px;
      */
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap;
 }
 #logo{
     position: relative;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
     font-weight: bold;
     font-size: 25px;
     left: 50px;
     top: 20px;
+
 }
 a{
     margin-right: 200px;
@@ -53,14 +57,17 @@ a{
     left:0;
     background-size: cover;
     
-} 
+}
 #f1{
     position: absolute;
     height: 800px;
-    width:100%;
+    width: 100%;
     left:0;
+    object-fit: cover;
+    
     /* background-size: cover; */
 }
+
 #n1{
     position:absolute;
     color: white;
@@ -202,4 +209,14 @@ p{
     margin-bottom: 10px;
 }
 
-
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #header button {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: left;
+    }
+}
