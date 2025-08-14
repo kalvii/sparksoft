@@ -50,22 +50,35 @@ a{
     color: white;
     padding: 20px;
     text-align: center;}
-#firstslide{
+/* #firstslide{
     position: absolute;
     height: 800px;
     width:100%;
     left:0;
     background-size: cover;
     
+} */
+ #firstslide {
+    position: relative;    /* Instead of absolute */
+    width: 100%;
+    height: auto;
+    background-size: cover;
 }
-#f1{
+/* #f1{
     position: absolute;
     height: 800px;
     width: 100%;
     left:0;
     object-fit: cover;
     
-    /* background-size: cover; */
+    /* background-size: cover; 
+} */
+ #f1 {
+    width: 100%;
+    height: auto;          /* Keep aspect ratio */
+    display: block;        /* Remove any extra space */
+    position: relative;    /* Let it flow naturally */
+    object-fit: cover;     /* Optional: crop to fill */
 }
 
 #n1{
