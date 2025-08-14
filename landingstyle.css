@@ -51,23 +51,22 @@ a{
     padding: 20px;
     text-align: center;}
 #firstslide{
-    position: absolute;
+    position: relative;
     height: 800px;
     width:100%;
     left:0;
     background-size: cover;
     
 }
-
 #f1{
-    position: relative;
+    position: absolute;
     height: 800px;
-    width: 100%;
+    width: 1440px;
     left:0;
     object-fit: cover;
+    
+    /* background-size: cover; */
 }
-   
-
 
 #n1{
     position:absolute;
