@@ -74,7 +74,7 @@ a{
     /* background-size: cover; 
 } */
  #f1 {
-    width: 100%;
+    width: 1800px;
     height: auto;          /* Keep aspect ratio */
     display: block;        /* Remove any extra space */
     position: relative;    /* Let it flow naturally */
