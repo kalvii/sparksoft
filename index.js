@@ -76,199 +76,91 @@
 
 // SERVICE////////////
 
-function addChildBox() {
-    let dive = document.querySelector(".mainpage");
+function createHoverBox(buttonId, boxId, headingText, paragraphs) {
+    let button = document.querySelector(buttonId);
 
-    // Avoid duplicates
-    if (!document.getElementById("nchild")) {
-        let newdev = document.createElement("div");
-        newdev.setAttribute("id", "nchild");
+    function addBox() {
+        let container = document.querySelector(".mainpage");
 
-        // Heading
-        let heading = document.createElement("h3");
-        heading.textContent = "Application services";
-        newdev.appendChild(heading);
+        if (!document.getElementById(boxId)) {
+            let box = document.createElement("div");
+            box.setAttribute("id", boxId);
+            box.classList.add("hover-box");
 
-        // Paragraph texts
-        let paragraphs = [
-            "Application management",
-            " ",
-            "Enterprise change management",
-            "Oracle services",
-            "Quality engineering",
-            "Salesforce services",
-            "SAP services",
-        ];
+            let heading = document.createElement("h3");
+            heading.textContent = headingText;
+            box.appendChild(heading);
 
-        // Append heading first, then paragraphs with delay
-        dive.appendChild(newdev);
+            container.appendChild(box);
 
-        paragraphs.forEach((text, index) => {
-            setTimeout(() => {
-                let para = document.createElement("p");
-                para.textContent = text;
-                newdev.appendChild(para);
-            }, index * 100); // 500ms delay between each paragraph
+            paragraphs.forEach((text, index) => {
+                setTimeout(() => {
+                    let para = document.createElement("p");
+                    para.textContent = text;
+                    box.appendChild(para);
+                }, index * 100);
+            });
+        }
+    }
+
+    function removeBox() {
+        let box = document.getElementById(boxId);
+        if (box) box.remove();
+    }
+
+let header1 = document.getElementById("mainheader");
+
+        // When cursor enters header
+        header1.addEventListener("mouseenter", function () {
+            header1.style.backgroundColor = "black";
+            header1.style.color = "white";
         });
-    }
-}
 
-function removeChildBox() {
-    let child = document.getElementById("nchild");
-    if (child) {
-        child.remove();
-    }
-}
-
-let mainDiv = document.querySelector("#n1");
-mainDiv.addEventListener("mouseenter", addChildBox);
-mainDiv.addEventListener("mouseleave", removeChildBox);
-
-//////////// INDUSTRIES/////////
-
-function addChildBox2() {
-    let dive2 = document.querySelector(".mainpage");
-
-    // Avoid duplicates
-    if (!document.getElementById("nchild2")) {
-        let newdev2 = document.createElement("div");
-        newdev2.setAttribute("id", "nchild2");
-
-        // Heading
-        let heading = document.createElement("h3");
-        heading.textContent = "Industries";
-        newdev2.appendChild(heading);
-
-        // Paragraph texts
-        let paragraphs2 = [
-            "Banking and Financial Services",
-            "Insurance",
-            "Healthcare and Life Sciences",
-            "Technology, Media, and Telecom",
-            "Consumer Services",
-            
-        ];
-
-        // Append heading first, then paragraphs with delay
-        dive2.appendChild(newdev2);
-
-        paragraphs2.forEach((text, index) => {
-            setTimeout(() => {
-                let para = document.createElement("p");
-                para.textContent = text;
-                newdev2.appendChild(para);
-            }, index * 100); // 500ms delay between each paragraph
+        // When cursor leaves header
+        header1.addEventListener("mouseleave", function () {
+            header1.style.backgroundColor="transparent";
+            header1.style.color = "black";
         });
-    }
+
+
+    button.addEventListener("mouseenter", addBox);
+    button.addEventListener("mouseleave", removeBox);
+    
 }
 
-function removeChildBox2() {
-    let child = document.getElementById("nchild2");
-    if (child) {
-        child.remove();
-    }
-}
+// Create all your sections here
+createHoverBox("#n1", "nchild", "Application services", [
+    "Application management",
+    "Enterprise change management",
+    "Oracle services",
+    "Quality engineering",
+    "Salesforce services",
+    "SAP services"
+]);
 
-let mainDiv2 = document.querySelector("#n2");
-mainDiv2.addEventListener("mouseenter", addChildBox2);
-mainDiv2.addEventListener("mouseleave", removeChildBox2);
+createHoverBox("#n2", "nchild2", "Industries", [
+    "Banking and Financial Services",
+    "Insurance",
+    "Healthcare and Life Sciences",
+    "Technology, Media, and Telecom",
+    "Consumer Services"
+]);
 
-///INSIGHTS//////
+createHoverBox("#n3", "nchild3", "Business insights", [
+    "Analyst mentions",
+    "Blogs",
+    "Brochures",
+    "Client stories",
+    "Customer engagement",
+    "Design and strategy",
+    "Technology transformation",
+    "Workplace and culture",
+    "Slated For Tomorrow"
+]);
 
-function addChildBox3() {
-    let dive3 = document.querySelector(".mainpage");
+createHoverBox("#n4", "nchild4", "Current opportunities", [
+    "Life at SparkSoft",
+    "Join our talent community"
+]);
 
-    // Avoid duplicates
-    if (!document.getElementById("nchild3")) {
-        let newdev3 = document.createElement("div");
-        newdev3.setAttribute("id", "nchild3");
-
-        // Heading
-        let heading = document.createElement("h3");
-        heading.textContent = "Business insights";
-        newdev3.appendChild(heading);
-
-        // Paragraph texts
-        let paragraphs3 = [
-            "Analyst mentions",
-            "Blogs",
-            "Brochures",
-            "Client stories",
-            "Customer engagement",
-            "Design and strategy",
-            "Technology transformation",
-            "Workplace and culture",
-            "Slated For Tomorrow",
-        ];
-
-        // Append heading first, then paragraphs with delay
-        dive3.appendChild(newdev3);
-
-        paragraphs3.forEach((text, index) => {
-            setTimeout(() => {
-                let para = document.createElement("p");
-                para.textContent = text;
-                newdev3.appendChild(para);
-            }, index * 100); // 500ms delay between each paragraph
-        });
-    }
-}
-
-function removeChildBox3() {
-    let child = document.getElementById("nchild3");
-    if (child) {
-        child.remove();
-    }
-}
-
-let mainDiv3 = document.querySelector("#n3");
-mainDiv3.addEventListener("mouseenter", addChildBox3);
-mainDiv3.addEventListener("mouseleave", removeChildBox3);
-
-///Careers
-
-function addChildBox4() {
-    let dive4 = document.querySelector(".mainpage");
-
-    // Avoid duplicates
-    if (!document.getElementById("nchild4")) {
-        let newdev4 = document.createElement("div");
-        newdev4.setAttribute("id", "nchild4");
-
-        // Heading
-        let heading = document.createElement("h3");
-        heading.textContent = "Current opportunities";
-        newdev4.appendChild(heading);
-
-        // Paragraph texts
-        let paragraphs4= [
-            "Life at SparkSoft",
-            "Join our talent community",
-        
-
-        ];
-
-        // Append heading first, then paragraphs with delay
-        dive4.appendChild(newdev4);
-
-        paragraphs4.forEach((text, index) => {
-            setTimeout(() => {
-                let para = document.createElement("p");
-                para.textContent = text;
-                newdev4.appendChild(para);
-            }, index * 100); // 500ms delay between each paragraph
-        });
-    }
-}
-
-function removeChildBox4() {
-    let child = document.getElementById("nchild4");
-    if (child) {
-        child.remove();
-    }
-}
-
-let mainDiv4 = document.querySelector("#n4");
-mainDiv4.addEventListener("mouseenter", addChildBox4);
-mainDiv4.addEventListener("mouseleave", removeChildBox4);
 

@@ -19,7 +19,7 @@
   padding: 10px 20px;
   flex-wrap: wrap;
   top: 0;
-  background-color:transparent;
+  
 }
 
 #logo {
@@ -29,7 +29,7 @@
 }
 
 a {
-  margin-right: 20px;
+  /* margin-right: 20px; */
   text-decoration: none;
   color: white;
 }
@@ -40,6 +40,7 @@ a {
   padding: 20px;
   text-align: center;
 }
+
 
 /* FIRST SLIDE */
 /* #firstslide {
@@ -57,11 +58,10 @@ a {
     z-index: -1;
   top: 0;
   
-  
 }
 
 /* NAV BUTTONS CONTAINER */
-.nav-buttons {
+/* .nav-buttons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -78,10 +78,10 @@ a {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
+} */
 
 /* CONTENT BOXES */
-.content-container {
+/* .content-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -97,37 +97,41 @@ a {
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
-}
+} */
 
-h1 {
-  font-size: 29px;
+h3 {
+  position: relative;
+  font-size: 20px;
   font-weight: bold;
+  text-align: center;
 }
 
 p {
+  position: relative;
+  text-align: center;
   font-size: 17px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 /* RESPONSIVE BREAKPOINTS */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .content-box {
     flex: 1 1 calc(50% - 20px);
   }
-}
+} */
 
 @media (max-width: 768px) {
   #header {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    left: 0px;
   }
-
+}
   a {
     margin: 10px 0;
   }
 
-  .nav-buttons {
+  /* .nav-buttons {
     position: static;
     transform: none;
     margin-top: 10px;
@@ -136,19 +140,30 @@ p {
   .content-box {
     flex: 1 1 100%;
   }
-}
+} */
 
 @media (max-width: 480px) {
   #logo {
     font-size: 20px;
   }
-
-  .nav-buttons button {
+}
+  /* .nav-buttons button {
     font-size: 16px;
   }
-}
+} */
 button{
     background-color: transparent;
     color: white;
     border: none;
 }
+.hover-box h3,
+.hover-box p {
+    position: relative;
+    /* left: 20px; Shift text only */
+    color: white;
+    background-color: black;
+    /* margin: 5px 0; */
+} 
+
+
+
