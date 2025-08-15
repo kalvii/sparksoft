@@ -164,6 +164,9 @@ button{
     background-color: black;
     /* margin: 5px 0; */
 } 
+#nchild,#nchild2,#nchild3,#nchild4{
+  background-color: black;
+}
 
 
 
