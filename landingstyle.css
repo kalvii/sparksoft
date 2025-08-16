@@ -60,44 +60,7 @@ a {
   
 }
 
-/* NAV BUTTONS CONTAINER */
-/* .nav-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
-.nav-buttons button {
-  color: white;
-  font-size: 18px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-} */
-
-/* CONTENT BOXES */
-/* .content-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-}
-
-.content-box {
-  flex: 1 1 calc(25% - 20px);
-  min-width: 250px;
-  max-width: 350px;
-  color: white;
-  padding: 15px;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
-} */
 
 h3 {
   position: relative;
@@ -167,6 +130,7 @@ button{
 #nchild,#nchild2,#nchild3,#nchild4{
   background-color: black;
 }
+/* 2ndpage_code */
 #f2 {
     position: absolute;
   width: 100%;
@@ -221,6 +185,63 @@ button{
    line-height: 35px;
    justify-content: center;
    
+}
+/* thirdPage_code */
+#thirdpage {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 1600px;
+  color: white;
+}
+#hed2{
+  position: relative;
+  font-size: 50px; 
+  top: 300px;
+  text-decoration: solid;
+  text-align: center;
+}
+#parag2{
+  position: relative;
+  top: 350px;
+  text-align: center;
+}
+
+ 
+.pbtn2{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 400px;
+  height: 50px;
+  
+  
+}
+#btn2{
+  display: flex;
+   background-color: white;
+   color: black;
+   font-size: 25px;
+   display: inline;
+   border-radius: 20px;
+   line-height: 35px;
+   justify-content: center;
+   
+}
+.pbtn2:hover #btn2 {
+  background-color: lightgray;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+#f3 {
+    position: absolute;
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+    z-index: -1;
+
+  
 }
 
 
