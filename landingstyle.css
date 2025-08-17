@@ -124,7 +124,7 @@ button{
     position: relative;
     /* left: 20px; Shift text only */
     color: white;
-    background-color: none;
+    background-color:none;
     /* margin: 5px 0; */
 } 
 #nchild,#nchild2,#nchild3,#nchild4{
