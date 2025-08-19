@@ -240,8 +240,14 @@ button{
   height: 800px;
   object-fit: cover;
     z-index: -1;
+}
 
-  
+.group_pic .mySlides{
+    position: absolute;
+    height: 800px;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 
