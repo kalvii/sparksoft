@@ -3,52 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>trial</title>
-    <link rel="stylesheet" href="landingstyle.css">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+     .nav-btn:hover{
+        background-color:red;
+      }
+      .log:hover{
+        background-color: rgb(50, 48, 48);
+      }
+      
+      .pic{
+        position: relative;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
     
-</head>
-<body>
-    <div class="mainpage">
-<!--         <div id="firstslide"> -->
-        <div class="group_pic">
-  <img class="mySlides" src="pic1.jpg">
-  <img class="mySlides" src="pic2.jpg">
-  <img class="mySlides" src="pic3.jpg">
-  <img class="mySlides" src="pic5.jpg">
-    </div>
-          <header id="mainheader">
-        <div id="header">
-        <a id="logo">Sparksoft Solution</a>
-        <button id="n1">Service</button>
-        <button id="n2">Industries</button>
-        <button id="n3">Insights</button>
-       <button id="n4">Careers</button>
-       <button id="n5">Contact</button>
-        </header>
-   
-        </div>
-        <div id="secondpage">
-        <div id="imfor">
-            <img id="f2" src="pic3.jpg"> 
-            <h1 id="hed">State of Cybersecurity Report 2025</h1>
-             <p id="parag">Ai Strengthens and Disrupts Cyber Resilience</p>
-            <div class="pbtn">
-                <button id="btn">Learn more</button>
-            </div>
-        </div>
+
+@media (max-width: 767px){
+  .cfeatures{ top: 56px; }   /* tweak if your mobile navbar is taller/shorter */
+}
+
+      .hed{
+        background-color:rgb(33, 37, 41) ;
        
+      }
+      #consuFeat{
+        transform: translateX(15%);
+      }
+
+      .pmenu{
+        color: aquamarine;
+        
+      }
+      .cfeatures{
+  position:fixed;
+  left: 0;
+  right: 0;
+  top:auto;           /* adjust to your navbar height */
+  width: 80%;
+  background-color: rgb(33, 37, 41);
+  color: white;
+  z-index: 50;         /* above page content */
+  transform: translateX(10%);    /* remove translateX that shifts it */
+}  
+.banner-card{
+  position: relative;
+}
+      .banner-text{
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .banner-text h4{
+        font-size: 6rem;
+        margin: 7px 0;
+        color: black;
+      }
+      .banner-text p2{
+        font-size: 2rem;
+        color: black;
+      } 
+      .card-button{
+        position: relative;
+        height: 60px;
+        width: 220px;
+        top: 34px;
+        background-color: rgb(47, 47, 216);
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      
+      
+
+    </style>
+</head>
+<body class="bg-slate-900">
+  <!-- Navbar Stared here -->
+   <nav class="hed  flex justify-between p-4 text-white h-auto sticky top-0 ">
+    <div class="text-2xl font-bold  items-center md:flex hidden">SparkSoft Solution</div>
+    <div>
+      <img class="w-22 h-22 rounded-2xl top-1 md:hidden"src=".\spark.png" alt="">
      </div>
-        <div id="thirdpage">
-            <div id="imfor2">
-                <img id="f3" src="pic4.jpg"> 
-                <h1 id="hed2">Customer Success Stories </h1>
-                
-                <p id="parag2">Sparksoft uses consulting-led, AI-powered strategies to help customers realize their ambination. </p>
-                <div class="pbtn2">
-                    <button id="btn2">Learn more</button>
-                </div>
-            </div>
+ 
+    <div id="dropdown-menu" class="-top-full md:flex hidden  flex-wrap justify-center items-center">
+      <button id="homeBtn" data-target="homeFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Service<span class="arrow1">▼</span></button >
+      <button  id="servBtn" data-target="servFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Industries<span class="arrow2">▼</span></button >
+      <button  id="insiBtn" data-target="insiFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Insights<span class="arrow3">▼</span></button >
+      <button  id="contBtn" data-target="contFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Contact Us<span class="arrow4">▼</span></button >
+      <button  id="careBtn" data-target="careFeatures" class="nav-btn mx-[10px] cursor-pointer text-white flex justify-center px-2 rounded-2xl">Career<span class="arrow5">▼</span></button >
     </div>
-<script src="index.js"> </script>
+    <div class=" log hidden md:block px-2 py-2 bg-indigo-700 font-bold cursor-pointer rounded-2xl ">Login/Signup</div>
+     
+    <div id="toogle-button" class="md:hidden">
+      <a class="text-4xl" href="#">&#8801;</a>
+    </div>
+ </nav>
+   <!-- Navbar End here -->
+
+    <!-- Features Home section satrt here-->
+<div class="pmenu">
+     
+  <div class=" w-full  flex justify-start flex-wrap flex-row  cfeatures ">
+    <div id="homeFeatures" class=" flex-col   p-6  md:grid-cols-2 hidden">
+      <div id="consuBtn" class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Consulting</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Enterprise Solutions</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Cloud</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Network Solutions and Services</div>
+    </div>
+    
+    <div id="consuFeat" class="w-1/2 flex-col justify-center items-center p-6 rounded-lg shadow hidden opacity-5">
+    <h1 class="text-xl font-bold">Strategy & Planning</h1>
+    <ul>
+      <li>Aligning IT infrastructure with business objectives</li>
+      <li>Digital transformation roadmaps</li>
+      <li>Cloud migration strategies</li>
+      <li>Identify strengths, weaknesses, and areas of risk or redundancy.</li>
+      <li>Compare current capabilities with future needs.</li>
+      <li>Create a phased plan for upgrades, migrations, and new implementations.</li>
+      <li>Prioritize based on ROI, urgency, and resource availability.</li>
+      <li>Identify potential risks (cybersecurity, data loss, regulatory issues).</li>
+      <li>Build mitigation strategies and ensure compliance with standards (e.g., GDPR, ISO, HIPAA).</li>
+      <li>Develop communication plans, training programs, and stakeholder engagement strategies.</li>
+    </ul>
+  </div>
+  </div>
+   <!-- Features Home section end here-->
+
+     <!-- Features Service section satrt here-->
+  <div class=" w-full  flex justify-start flex-wrap flex-row  cfeatures ">  
+    <div id="servFeatures" class=" flex-col   p-6  md:grid-cols-2 hidden  ">
+    <!-- <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10"> -->
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Public Services</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Retail</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Travel and Logistics</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Education</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Healthcare</div>
+      <div class="nav-btn cursor-pointer p-4 bg-gray-100 rounded-lg shadow">Communications, Media, and Information Services</div>
+     </div>
+  </div>
+   <!-- Features service section end here-->
+
+   <!-- Features insight section satrt here-->
+  <div id="insiFeatures" class="cfeatures  hidden  ">
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
+      <div class="p-4 bg-gray-100 rounded-lg shadow">Discover why customers choose SparkSoft Solution
+We are a digital transformation and technology partner of choice for industry-leading organizations worldwide.</div>
+    
+    </div>
+  </div>
+   <!-- Features insight section end here-->
+    <!-- Features insight section satrt here-->
+  <div id="contFeatures" class="cfeatures  hidden  ">
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
+      <div class="p-4 bg-gray-100 rounded-lg shadow"> Reach out to us for inquiries, partnerships, or support.</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">123 Corporate Park, New Delhi, India</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">91 9471887406</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">📩 kkanhaiya942@gmail.com</div>
+    </div>
+  </div>
+   <!-- Features insight section end here-->
+    <!-- Features insight section satrt here-->
+  <div id="careFeatures" class="cfeatures  hidden  ">
+    <div class="p-6 grid grid-cols-1 md:grid-cols-2 left-10">
+      <div class="p-4 bg-gray-100 rounded-lg shadow"> Want to be a global change-maker? Join our team.</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">At SparkSoft Solution, we believe exceptional work begins with hiring, celebrating
+         and nurturing the best people — from all walks of life.</div>
+      <div class="p-4 bg-gray-100 rounded-lg shadow">Join Us</div>
+      
+    </div>
+  </div>
+  </div>  
+   <!-- Features insight section end here-->
+    
+
+   <!--  image section start here -->
+    <div class="banner-card w-full h-auto  ">
+      <img class=" pic w-full hidden md:block " src=".\frontpage.jpg" alt="">
+       <img class="w-full md:hidden" src=".\potr.jpg" alt=""> 
+        <div class="banner-text  ">
+        <p2>We Provide Outsourced</p2>
+        <h4>IT Services</h4>
+        <p2>for Small & Mid-sized business</p2>
+       <div class=" card-button ">
+        <div class="flex justify-center ">Learn More <span>&#8594;</span></div>
+       </div>
+       </div>
+       
+      
+    </div>
+   
+    <!-- image section end here -->
+
+    <!-- our customer section start here -->
+   <div class="h-auto w-full flex flex-wrap justify-center items-center text-center p-10">
+    <div class="w-full h-auto flex flex-wrap flex-col items-center">
+      <p class="text-indigo-800 font-bold text-3xl md:text-4xl text-center">Pure Hardwork, No Shortcut</p>
+      <div class="w-36 h-1 border-b-4 border-yellow-400 mt-2 rounded-2xl md:mt-4 mb-12"></div>
+    </div>
+  </div>  
+    <div class="w-full flex flex-wrap justify-evenly ">
+      
+        
+         <div class="w-46 flex flex-col items-center mb-12">
+          <img class="w-22 h-22 rounded-full" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 flex flex-col items-center mb-12">
+          <img class="w-22 h-22 rounded-full" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 flex flex-col items-center mb-12">
+          <img class="w-22 h-22 rounded-full" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+    </div>
+    
+    <!-- our customer section end here -->
+     
+     <!-- our Product section start here -->
+
+    <div class="h-auto w-full flex flex-wrap justify-center items-center text-center p-10">
+    <div class="w-full h-auto flex flex-wrap flex-col items-center">
+      <p class="text-indigo-800 font-bold text-3xl md:text-4xl text-center">Our Products</p>
+      <div class="w-36 h-1 border-b-4 border-yellow-400 mt-2 rounded-2xl md:mt-4 mb-12"></div>
+      </div>
+    </div>
+      
+    <div class="w-full flex flex-wrap justify-around">
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+         <div class="w-46 h-60 flex flex-col justify-center items-center mb-12 border-white border-2 rounded-xl p2  ">
+          <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+          <p class="text-3xl font-bold text-white">600+</p>
+          <p class="text-1xl font-bold text-gray-500">Different Coursec</p>
+         </div>
+    </div>
+    <!-- our Product section end here -->    
+     <!-- our footer section start here  -->
+     <footer class="w-full bg-gray-600 px-4 text-white pt-8 flex flex-col md:flex-row flex-wrap justify-between md:px-12">
+      <div>
+        <img class="w-22 h-22 rounded-full top-1"src=".\spark.png" alt="">
+        <p class="my-4">Email us: kkanhaiya942@gmail.com</p>
+        <img class="w-22 h-22 rounded-full top-1" src=".\logo.jpg" alt="">
+      </div>
+      <div>
+        <h2 class="font-bold text-xl mt-4">ComName</h2>
+        <div class="w-32 h-1 border-b-2 border-amber-400 rounded-2xl my-2"></div>
+        <div>
+          <p>About Us</p>
+          <p>FAQ</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+      <div>
+        <h2 class="font-bold text-xl mt-4">ComName</h2>
+        <div class="w-32 h-1 border-b-2 border-amber-400 rounded-2xl my-2"></div>
+        <div>
+          <p>About Us</p>
+          <p>FAQ</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+      <div>
+        <h2 class="font-bold text-xl mt-4">ComName</h2>
+        <div class="w-32 h-1 border-b-2 border-amber-400 rounded-2xl my-2"></div>
+        <div>
+          <p>About Us</p>
+          <p>FAQ</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+
+     </footer>
+<!-- our footer section end here  -->
+
+<!-- toggle button behaviour code> -->
+<script>
+  const toggleButton = document.getElementById('toogle-button');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+  toggleButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+  });
+  toggleButton.addEventListener('click', () => {
+    toggleButton.classList.toggle('top-full');
+  });
+// ====== BUTTONS & PANELS ======
+const homeBtn = document.getElementById("homeBtn");   // Service
+const servBtn = document.getElementById("servBtn");   // Industries
+const insiBtn = document.getElementById("insiBtn");   // Insights
+const contBtn = document.getElementById("contBtn");   // Contact
+const careBtn = document.getElementById("careBtn");   // Career
+
+// const homeFeatures = document.getElementById("homeFeatures");
+// const servFeatures = document.getElementById("servFeatures");
+// const insiFeatures = document.getElementById("insiFeatures");
+// const contFeatures = document.getElementById("contFeatures");
+// const careFeatures = document.getElementById("careFeatures");
+
+// Inner panel
+const consuBtn  = document.getElementById("consuBtn");
+const consuFeat = document.getElementById("consuFeat");
+
+// All panels list
+const panels = [homeFeatures, servFeatures, insiFeatures, contFeatures, careFeatures, consuFeat].filter(Boolean);
+
+// ====== HELPERS ======
+function hideAll() {
+  panels.forEach(p => p.classList.add("hidden"));
+}
+
+// Stop outside-close when interacting inside any panel
+// Use pointerdown so it blocks the document pointerdown closer.
+panels.forEach(p => p.addEventListener("pointerdown", e => e.stopPropagation()));
+
+// ====== TOP BAR BUTTONS (one open at a time) ======
+function wire(btn, panel) {
+  if (!btn || !panel) return;
+  btn.addEventListener("pointerdown", e => {
+    e.stopPropagation();                    // don't trigger outside closer
+    const willShow = panel.classList.contains("hidden");
+    hideAll();
+    if (willShow) panel.classList.remove("hidden");
+  });
+}
+
+wire(homeBtn, homeFeatures);   // "Service" opens #homeFeatures
+wire(servBtn, servFeatures);
+wire(insiBtn, insiFeatures);
+wire(contBtn, contFeatures);
+wire(careBtn, careFeatures);
+
+// ====== INNER TOGGLE (Consulting) ======
+if (consuBtn && consuFeat) {
+  consuBtn.addEventListener("pointerdown", e => {
+    e.stopPropagation();
+    consuFeat.classList.toggle("hidden");
+  });
+}
+
+// ====== OUTSIDE CLICK/TAP -> CLOSE ALL ======
+document.addEventListener("pointerdown", hideAll);
+
+// ====== ESC KEY -> CLOSE ALL ======
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") hideAll();
+});
+
+  </script>
+<!-- toggle button behaviour code end here -->
+
 </body>
 </html>
